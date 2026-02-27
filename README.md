@@ -46,6 +46,8 @@ let output = layer.forward(input); // [1, 1, 4096]
 
 ### Standalone Dequantization
 
+> ⚠️ **Warning:** `AWQLinear` and the standalone dequantization kernel are experimental and not fully tested yet. Use `AWQGEMMLinear` (fused GEMM) for production workloads.
+
 Use `AWQLinear` when you need the dequantized weight matrix:
 
 ```rust

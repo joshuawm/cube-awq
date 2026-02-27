@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "AWQ quantization kernels on GPU via CubeCL"
 license = "MIT"
-repository = "https://github.com/JoshuaWang0930/cube-awq"
+repository = "https://github.com/joshuawm/cube-awq"
 keywords = ["awq", "quantization", "gpu", "cubecl"]
 
 [dependencies]

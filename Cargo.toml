@@ -1,0 +1,25 @@
+[package]
+name = "cube-awq"
+version = "0.1.0"
+edition = "2021"
+description = "AWQ quantization kernels on GPU via CubeCL"
+license = "MIT"
+repository = "https://github.com/JoshuaWang0930/cube-awq"
+keywords = ["awq", "quantization", "gpu", "cubecl"]
+
+[dependencies]
+cubecl = { git = "https://github.com/tracel-ai/cubecl", rev = "a3987c60e410d77b6b38e99d1c2a6bc0979d38ba", package = "cubecl", features = ["wgpu"] }
+bytemuck = { version = "1.14", features = ["derive"] }
+burn-tensor = { git = "https://github.com/tracel-ai/burn", package = "burn-tensor" }
+burn-derive = { git = "https://github.com/tracel-ai/burn", package = "burn-derive" }
+burn = { git = "https://github.com/tracel-ai/burn", package = "burn", features = ["fusion", "ndarray", "wgpu"] }
+burn-cubecl = { git = "https://github.com/tracel-ai/burn", package = "burn-cubecl", features = ["fusion"] }
+tokio = { version = "1.49.0", features = ["full"] }
+
+[dev-dependencies]
+bytemuck = { version = "1.14", features = ["derive"] }
+criterion = "0.5"
+
+[[bench]]
+name = "awq_kernel_gemm"
+harness = false

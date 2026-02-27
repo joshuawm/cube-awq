@@ -1,0 +1,16 @@
+# Build outputs (crate root + nested working dirs)
+target/
+**/target/
+
+# Benchmark outputs
+criterion/
+benches/*.csv
+benches/*.txt
+benches/*.log
+benches/*.out
+benches/*.tmp
+
+# Local model assets (do not publish)
+**/*.safetensors
+**/*.mpk
+**/tokenizer.json
